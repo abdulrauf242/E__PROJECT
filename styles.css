@@ -1,0 +1,211 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+/* navbar */
+/* Default Navbar (Desktop) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: teal;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Offcanvas Menu (Hidden by Default) */
+.offcanvas-menu {
+    display: none;
+}
+
+/* Normal Navbar Links for Desktop */
+.nav-links-desktop {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links-desktop a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links-desktop a:hover {
+    background: gold;
+    color: teal;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Hide Menu Button on Desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* Mobile View (Max 768px) */
+@media screen and (max-width: 768px) {
+    .nav-links-desktop {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Offcanvas Menu for Mobile */
+    .offcanvas-menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background: teal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        transition: 0.3s ease-in-out;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .offcanvas-menu.show {
+        right: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        background: gold;
+        color: teal;
+        padding: 10px;
+    }
+
+    /* Overlay for Mobile */
+    .overlay {
+        display: none;
+        /* position: fixed; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+.nav-links-desktop li {
+    position: relative;
+}
+
+.nav-links-desktop a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    color: rgb(202, 202, 202);
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+div#main-cards{
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+img.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   
+}
+img.card-image:hover {
+    transform: scale(1.1);
+}
+div.card {
+    width: 300px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s;
+}
