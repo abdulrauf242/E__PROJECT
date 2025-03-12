@@ -22,6 +22,55 @@
         "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
         "price": 49999, 
         "img": "./assests/blackhis.webp"
+    },
+    {
+        "id": 4,
+        "brand": "Hisense",
+        "name": "Hisense 12KB60 Cool Only 1.0 Ton AC",
+        "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
+        "price": 49999,
+        "img": "./assests/hisense.webp"
+    },
+    {
+        "id": 5,
+        "brand": "Hisense",
+        "name": "Hisense INVERTER SPLIT AC 18TQ 60HC - 1.5 TON",
+        "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
+        "price": 49999,
+        "img": "./assests/hi sense.jpg"
+    },
+    {
+        "id": 6,
+        "brand": "Hisense",
+        "name": "Hisense INVERTER SPLIT AC 18TG 75HCI 2 TON - Black",
+        "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
+        "price": 49999, 
+        "img": "./assests/blackhis.webp"
+    },
+    {
+        "id": 7,
+        "brand": "Hisense",
+        "name": "Hisense 12KB60 Cool Only 1.0 Ton AC",
+        "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
+        "price": 49999,
+        "img": "./assests/hisense.webp"
+    },
+    {
+        "id": 8,
+        "brand": "Hisense",
+        "name": "Hisense INVERTER SPLIT AC 18TQ 60HC - 1.5 TON",
+        "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
+        "price": 49999,
+        "img": "./assests/hi sense.jpg"
+    },
+    {
+        "id": 9,
+        "brand": "Hisense",
+        "name": "Hisense INVERTER SPLIT AC 18TG 75HCI 2 TON - Black",
+        "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
+        "price": 49999, 
+        "img": "./assests/blackhis.webp"
     }
+
 
 ]

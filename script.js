@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="card-body">
                         <h5 class="card-title">${item.name}</h5>
                         <p class="card-text">${item.disc}</p>
-                        <p class="card-text">Price: ${item.price}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <b><p class="card-text">Price: ${item.price}</p></b> <br>
+                        <a href="#" class="btn btn-primary">buy now</a>
                     </div>
                 </div>
                 `;
