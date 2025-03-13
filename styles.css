@@ -411,4 +411,13 @@ img {
       margin: 0 auto;
     }
   }
+  /* footer */
+
   
+    .bg-teal {
+      background-color: #008080; /* Teal color */
+    }
+  
+    footer a:hover {
+      text-decoration: underline;
+    }
