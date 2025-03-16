@@ -10,6 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./script.js">
+    <!-- Add this to your HTML head -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- Example of adding animation classes to sections -->
+<section class="animate__animated animate__fadeIn">
+    <!-- Section content -->
+</section>
 </head>
 
 <body>
@@ -19,8 +27,8 @@
         </div>
         <!-- Desktop Menu -->
         <ul class="nav-links-desktop">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
             <li class="dropdown">
                 <a href="#">Brands &#9662;</a>
                 <ul class="dropdown-menu">
@@ -29,7 +37,7 @@
                     <li><a href="#">GREE</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./COntact.html">Contact</a></li>
         </ul>
         <!-- Mobile Menu Button -->
         <button class="menu-toggle" id="menu-toggle">☰</button>
@@ -38,8 +46,8 @@
     <div class="offcanvas-menu" id="offcanvas-menu">
         <button class="close-btn" id="close-btn">✖</button>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
             <li class="dropdown">
                 <a href="#">Brands &#9662;</a>
                 <ul class="dropdown-menu">
@@ -48,14 +56,13 @@
                     <li><a href="#">GREE</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./COntact.html">Contact</a></li>
         </ul>
     </div>
     <div class="overlay" id="overlay"></div>
 </body>
 
 </html>
-<h1 id="heading">Glacier Cool</h1>
 <!-- slider -->
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -70,7 +77,7 @@
         </div>
     </div>
 </div>
-<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+<!-- <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
     aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -81,70 +88,72 @@
         <li class="breadcrumb-item active" aria-current="page"><a href="#">GREE</a></li>
         <li class="breadcrumb-item active" aria-current="page"><a href="#">Contact</a></li>
     </ol>
-</nav>
+</nav> -->
 <!-- cards -->
 <!-- <div id="main-cards"></div> -->
 <!-- column -->
 <!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="h-100">
-                    <h1 class="display-6 mb-5">Welcome To Best Cooling & Heating Service Center</h1>
-                    <div class="row g-4 mb-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <img class="flex-shrink-0 me-3" src="img/icon/icon-07-primary.png" alt="">
-                                <h5 class="mb-0">Expert Technician</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <img class="flex-shrink-0 me-3" src="img/icon/icon-09-primary.png" alt="">
-                                <h5 class="mb-0">Best Quality Services</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                    </p>
-                    <div class="border-top mt-4 pt-4">
-                        <div class="row">
+<div class="animated-section">
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <h1 class="display-6 mb-5">Welcome To Best Cooling & Heating Service Center</h1>
+                        <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle me-3">
-                                        <i class="fa fa-phone-alt text-white"></i>
-                                    </div>
-                                    <h5 class="mb-0">+012 345 6789</h5>
+                                    <img class="flex-shrink-0 me-3" src="img/icon/icon-07-primary.png" alt="">
+                                    <h5 class="mb-0">Expert Technician</h5>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle me-3">
-                                        <i class="fa fa-envelope text-white"></i>
+                                    <img class="flex-shrink-0 me-3" src="img/icon/icon-09-primary.png" alt="">
+                                    <h5 class="mb-0">Best Quality Services</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                            eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                        </p>
+                        <div class="border-top mt-4 pt-4">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="btn-lg-square bg-primary rounded-circle me-3">
+                                            <i class="fa fa-phone-alt text-white"></i>
+                                        </div>
+                                        <h5 class="mb-0">+012 345 6789</h5>
                                     </div>
-                                    <h5 class="mb-0">developer242@gmail.com</h5>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="btn-lg-square bg-primary rounded-circle me-3">
+                                            <i class="fa fa-envelope text-white"></i>
+                                        </div>
+                                        <h5 class="mb-0">developer242@gmail.com</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="row g-3">
-                    <div class="col-6 text-end">
-                        <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg"
-                            style="margin-top: 25%;">
-                    </div>
-                    <div class="col-6 text-start">
-                        <img class="img-fluid w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
-                    </div>
-                    <div class="col-6 text-end">
-                        <img class="img-fluid w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
-                    </div>
-                    <div class="col-6 text-start">
-                        <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg"
+                                style="margin-top: 25%;">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid w-80 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,76 +162,82 @@
 </div>
 <!-- About End -->
 <!-- Brands Start -->
+ <div class="animated-section">
+    <h2 id="recent"> Most Recent Products</h2>
 <div id="main-cards"></div>
+ </div>
 <!-- counter strt -->
 
-<div class="counter-section">
-    <div class="counter-item">
-        <h2>1234</h2>
-        <p>Happy Clients</p>
-    </div>
-
-    <div class="counter-item">
-        <h2>1234</h2>
-        <p>Projects Succeed</p>
-    </div>
-
-    <div class="counter-item">
-        <h2>1234</h2>
-        <p>Awards Achieved</p>
-    </div>
-
-    <div class="counter-item">
-        <h2>1234</h2>
-        <p>Team Members</p>
+<div class="animated-section">
+    <div class="counter-section">
+        <div class="counter-item">
+            <h2 class="counter" data-target="1234">0</h2>
+            <p>Happy Clients</p>
+        </div>
+    
+        <div class="counter-item">
+            <h2 class="counter" data-target="1234">0</h2>
+            <p>Projects Succeed</p>
+        </div>
+    
+        <div class="counter-item">
+            <h2 class="counter" data-target="1234">0</h2>
+            <p>Awards Achieved</p>
+        </div>
+    
+        <div class="counter-item">
+            <h2 class="counter" data-target="1234">0</h2>
+            <p>Team Members</p>
+        </div>
     </div>
 </div>
-
 <!-- Features Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="display-6 mb-5">Few Reasons Why People Choosing Us!</h1>
-                <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                    eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <div class="d-flex mb-5">
-                    <div class="flex-shrink-0 btn-square rounded-circle"
-                        style="background-color: teal !important; width: 90px; height: 90px;">
-                        <img class="img-fluid" src="img/icon/icon-08-light.png" alt="">
+<div class="animated-section">
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-6 mb-5">Few Reasons Why People Choosing Us!</h1>
+                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <div class="d-flex mb-5">
+                        <div class="flex-shrink-0 btn-square rounded-circle"
+                            style="background-color: teal !important; width: 90px; height: 90px;">
+                            <img class="img-fluid" src="img/icon/icon-08-light.png" alt="">
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-3">Trusted Service Center</h5>
+                            <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                                eos.</span>
+                        </div>
                     </div>
-                    <div class="ms-4">
-                        <h5 class="mb-3">Trusted Service Center</h5>
-                        <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                            eos.</span>
+                    <div class="d-flex mb-5">
+                        <div class="flex-shrink-0 btn-square rounded-circle"
+                            style="background-color: teal !important; width: 90px; height: 90px;">
+                            <img class="img-fluid" src="img/icon/icon-10-light.png" alt="">
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-3">Reasonable Price</h5>
+                            <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                                eos.</span>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-0">
+                        <div class="flex-shrink-0 btn-square rounded-circle"
+                            style="background-color: teal !important; width: 90px; height: 90px;">
+                            <img class="img-fluid" src="img/icon/icon-06-light.png" alt="">
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-3">24/7 Supports</h5>
+                            <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                                eos.</span>
+                        </div>
                     </div>
                 </div>
-                <div class="d-flex mb-5">
-                    <div class="flex-shrink-0 btn-square rounded-circle"
-                        style="background-color: teal !important; width: 90px; height: 90px;">
-                        <img class="img-fluid" src="img/icon/icon-10-light.png" alt="">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="position-relative rounded overflow-hidden h-100" style="min-height: 400px;">
+                        <img class="position-absolute w-100 h-100" src="img/feature.jpg" alt="" style="object-fit: cover;">
                     </div>
-                    <div class="ms-4">
-                        <h5 class="mb-3">Reasonable Price</h5>
-                        <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                            eos.</span>
-                    </div>
-                </div>
-                <div class="d-flex mb-0">
-                    <div class="flex-shrink-0 btn-square rounded-circle"
-                        style="background-color: teal !important; width: 90px; height: 90px;">
-                        <img class="img-fluid" src="img/icon/icon-06-light.png" alt="">
-                    </div>
-                    <div class="ms-4">
-                        <h5 class="mb-3">24/7 Supports</h5>
-                        <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                            eos.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="position-relative rounded overflow-hidden h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/feature.jpg" alt="" style="object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -232,81 +247,83 @@
 
 
 <!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-6 mb-5">We Provide professional Heating & Cooling Services</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
-                    <div class="d-flex align-items-center bg-light">
-                        <div class="service-icon flex-shrink-0 bg-primary"
-                            style="background-color: teal !important; margin-left: 20px;">
-                            <img class="img-fluid" src="img/icon/icon-01-light.png" alt="">
+<div class="animated-section">
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6 mb-5">We Provide professional Heating & Cooling Services</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-1.jpg" alt="">
+                        <div class="d-flex align-items-center bg-light">
+                            <div class="service-icon flex-shrink-0 bg-primary"
+                                style="background-color: teal !important; margin-left: 20px;">
+                                <img class="img-fluid" src="img/icon/icon-01-light.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="">AC Installation</a>
                         </div>
-                        <a class="h4 mx-4 mb-0" href="">AC Installation</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item">
-                    <img class="img-fluid" src="img/service-2.jpg" alt="">
-                    <div class="d-flex align-items-center bg-light">
-                        <div class="service-icon flex-shrink-0 bg-primary"
-                            style="background-color: teal !important; margin-left: 20px;">
-                            <img class="img-fluid" src="img/icon/icon-02-light.png" alt="">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        <div class="d-flex align-items-center bg-light">
+                            <div class="service-icon flex-shrink-0 bg-primary"
+                                style="background-color: teal !important; margin-left: 20px;">
+                                <img class="img-fluid" src="img/icon/icon-02-light.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="">Cooling Services</a>
                         </div>
-                        <a class="h4 mx-4 mb-0" href="">Cooling Services</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item">
-                    <img class="img-fluid" src="img/service-3.jpg" alt="">
-                    <div class="d-flex align-items-center bg-light">
-                        <div class="service-icon flex-shrink-0 bg-primary"
-                            style="background-color: teal !important; margin-left: 20px;">
-                            <img class="img-fluid" src="img/icon/icon-03-light.png" alt="">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-3.jpg" alt="">
+                        <div class="d-flex align-items-center bg-light">
+                            <div class="service-icon flex-shrink-0 bg-primary"
+                                style="background-color: teal !important; margin-left: 20px;">
+                                <img class="img-fluid" src="img/icon/icon-03-light.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="">Heating Services</a>
                         </div>
-                        <a class="h4 mx-4 mb-0" href="">Heating Services</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item">
-                    <img class="img-fluid" src="img/service-4.jpg" alt="">
-                    <div class="d-flex align-items-center bg-light" style="background-color: none;">
-                        <div class="service-icon flex-shrink-0 bg-primary"
-                            style="background-color: teal !important; margin-left: 20px;">
-                            <img class="img-fluid" src="img/icon/icon-04-light.png" alt="">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-4.jpg" alt="">
+                        <div class="d-flex align-items-center bg-light" style="background-color: none;">
+                            <div class="service-icon flex-shrink-0 bg-primary"
+                                style="background-color: teal !important; margin-left: 20px;">
+                                <img class="img-fluid" src="img/icon/icon-04-light.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="">Maintenance & Repair</a>
                         </div>
-                        <a class="h4 mx-4 mb-0" href="">Maintenance & Repair</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item">
-                    <img class="img-fluid" src="img/service-5.jpg" alt="">
-                    <div class="d-flex align-items-center bg-light">
-                        <div class="service-icon flex-shrink-0 bg-primary"
-                            style="background-color: teal !important; margin-left: 20px;">
-                            <img class="img-fluid" src="img/icon/icon-05-light.png" alt="">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-5.jpg" alt="">
+                        <div class="d-flex align-items-center bg-light">
+                            <div class="service-icon flex-shrink-0 bg-primary"
+                                style="background-color: teal !important; margin-left: 20px;">
+                                <img class="img-fluid" src="img/icon/icon-05-light.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="">Indoor Air Quality</a>
                         </div>
-                        <a class="h4 mx-4 mb-0" href="">Indoor Air Quality</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item">
-                    <img class="img-fluid" src="img/service-6.jpg" alt="">
-                    <div class="d-flex align-items-center bg-light">
-                        <div class="service-icon flex-shrink-0 bg-primary"
-                            style="background-color: teal !important; margin-left: 20px;">
-                            <img class="img-fluid" src="img/icon/icon-06-light.png" alt="">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-6.jpg" alt="">
+                        <div class="d-flex align-items-center bg-light">
+                            <div class="service-icon flex-shrink-0 bg-primary"
+                                style="background-color: teal !important; margin-left: 20px;">
+                                <img class="img-fluid" src="img/icon/icon-06-light.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="">Annual Inspections</a>
                         </div>
-                        <a class="h4 mx-4 mb-0" href="">Annual Inspections</a>
                     </div>
                 </div>
             </div>
@@ -354,6 +371,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="script.js"></script>
     </body>
-
     </html>
+<div class="animated-section">
+    <!-- Section content -->
+</div>

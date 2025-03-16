@@ -46,4 +46,82 @@ document.addEventListener("DOMContentLoaded", function () {
             style: "decimal"
         }).format(price) + " PKR";
     }
+
+    // Number Count
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+
+    const animateCounters = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+
+                    // Lower inc to slow and higher to slow
+                    const inc = target / speed;
+
+                    // Check if target is reached
+                    if (count < target) {
+                        // Add inc to count and output in counter
+                        counter.innerText = Math.ceil(count + inc);
+                        // Call function every ms
+                        setTimeout(updateCount, 50);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCount();
+                observer.unobserve(counter); // Stop observing once the animation is done
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(animateCounters, {
+        threshold: 0.5 // Adjust this value as needed
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+
+    // Animation for sections
+    const sections = document.querySelectorAll('.animated-section');
+
+    const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                sectionObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.animated-section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+
