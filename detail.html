@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Glacier Cool - The best cooling & heating service center providing expert AC solutions.">
+    <title>Glacier Cool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./script.js">
+    <!-- Add this to your HTML head -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- Example of adding animation classes to sections -->
+<section class="animate__animated animate__fadeIn">
+    <!-- Section content -->
+</section>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assests/logo.png.webp" alt="Resume Builder Logo">
+        </div>
+        <!-- Desktop Menu -->
+        <ul class="nav-links-desktop">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Brands &#9662;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HiSense</a></li>
+                    <li><a href="#">Orient</a></li>
+                    <li><a href="#">GREE</a></li>
+                </ul>
+            </li>
+            <li><a href="./COntact.html">Contact</a></li>
+        </ul>
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+    </nav>
+    <!-- Offcanvas Menu (Only Mobile) -->
+    <div class="offcanvas-menu" id="offcanvas-menu">
+        <button class="close-btn" id="close-btn">✖</button>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Brands &#9662;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HiSense</a></li>
+                    <li><a href="#">Orient</a></li>
+                    <li><a href="#">GREE</a></li>
+                </ul>
+            </li>
+            <li><a href="./COntact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+</body>
+
+</html>
+<body>
+    <script>
+        var url = (window.location).href;
+        var koopId = url.substring(url.lastIndexOf('=') + 1);
+
+        fetch("main.json")
+        .then(response => response.json())
+        .then(json => {
+            for(var item in json) {
+                if(json[item].id == koopId) {
+                    document.getElementById("main-data").innerHTML = `
+<article class="cta">
+	<img class="img-m" src='${json[item].img}' alt="Small blue-grey yellow-breasted bird">
+	<div class="cta__text-column">
+		<h2>${json[item].name}</h2>
+		<p>${json[item].disc}</p>
+		<p>${formatPrice(json[item].price)}</p>
+        <p>${json[item].rating}</p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">Read all about it</a>
+	</div>
+</article>;`
+                }
+            }
+        })
+        .catch(error => console.error("Error fetching the JSON data:", error));
+
+        // Helper Function to Format Price
+        function formatPrice(price) {
+            return new Intl.NumberFormat("en-PK", {
+                style: "decimal"
+            }).format(price) + " PKR";
+        }
+
+    </script>
+    <style>
+        * {
+	box-sizing: border-box;
+}
+
+
+
+.img-m{
+	width: 50%;
+    padding: 30px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+ 
+img:hover {
+    transform: scale(1.1);
+}
+
+p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+h2 {
+	margin: 0;
+	font-size: 1.4rem;
+}
+
+@media (min-width: 50em) {
+	h2 {
+		font-size: 1.8rem;
+	}
+}
+
+.cta {
+	--shadowColor: 187 60% 40%;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 50rem;
+	width: 100%;
+	box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
+	border-radius: 0.8rem;
+	overflow: hidden;
+	border: 0.5rem solid;
+    text-align: center;
+    margin: 2rem auto;
+
+}
+
+.cta img {
+    flex: 1 0 50%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+	
+	
+}
+
+.cta__text-column {
+	padding: min(2rem, 5vw) min(2rem, 5vw) min(2.5rem, 5vw);
+	flex: 1 0 50%;
+}
+
+.cta__text-column > * + * {
+	margin: min(1.5rem, 2.5vw) 0 0 0;
+}
+
+.cta a {
+	display: inline-block;
+	color: black;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	background: hsl(187 75% 64%);
+	border-radius: 0.6rem;
+	font-weight: 700;
+	border: 0.35rem solid;
+}
+    </style>
+
+    <h1 id="heading">Details</h1>
+    <div id="main-data"></div>
+<!-- footer -->
+<footer class="bg-teal text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- About Section -->
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p>We provide the best services to our customers with a focus on quality and customer satisfaction.</p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-white text-decoration-none">About</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <p>Email: info@example.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Address: 123 Street, City, Country</p>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="text-center mt-3">
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+    </body>
+    </html>
+<div class="animated-section">
+    <!-- Section content -->
+</div>
