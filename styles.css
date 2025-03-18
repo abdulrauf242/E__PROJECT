@@ -103,6 +103,15 @@ img.img-fluid.w-80.wow.zoomIn:hover{
     z-index: 1000;
     
 }
+#image{
+    width: 94%;
+    height: auto;
+    margin-top: 30px;
+    overflow: hidden;
+    overflow-y: auto;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
 /* Mobile View (Max 768px) */
 @media screen and (max-width: 768px) {
     .nav-links-desktop {
@@ -239,7 +248,7 @@ img.img-fluid.w-75.wow.zoomIn{
     margin-right: 60px !important;
 }
 #recent{
-    width: 80% !important;
+    width: 91% !important;
 }
 
 
@@ -301,7 +310,7 @@ img.img-fluid.w-75.wow.zoomIn{
 }   
 #recent{
     display: flex;
-    margin-left: 40px;
+    margin-left: 60px;
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -696,4 +705,46 @@ label {
     .counter-item p {
         font-size: 0.9rem;
     }
+    #image{
+        width: 80%;
+        height: auto;
+    }
+    img.img-fluid.w-80.wow.zoomIn{
+        margin-left: 10px !important;
+    }
+    #recent{
+        width: 80% !important;
+        height: auto;
+        margin-left: 35px !important;
+        margin-bottom: 10px !important;
+        margin-top: 10px !important;
+        font-size: 1.3rem !important;
+        
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    #recent{
+        width: 80% !important;
+        height: auto;
+        margin-bottom: 10px !important;
+        margin-top: 10px !important;
+        font-size: 1.3rem !important;
+        margin-left: 74px !important;
+          
+        
+    }
+    
+}
+@media (min-width: 767px) and (max-width: 983px) {
+    #recent{
+        width: 61% !important;
+        height: auto;
+        margin-bottom: 10px !important;
+        margin-top: 10px !important;
+        font-size: 1.3rem !important;
+        margin-left: 192px !important;
+          
+        
+    }
+    
 }
