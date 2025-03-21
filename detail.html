@@ -26,19 +26,11 @@
             <img src="./assests/logo.png.webp" alt="Resume Builder Logo">
         </div>
         <!-- Desktop Menu -->
-        <ul class="nav-links-desktop">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./About.html">About</a></li>
-            <li class="dropdown">
-                <a href="#">Brands &#9662;</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">HiSense</a></li>
-                    <li><a href="#">Orient</a></li>
-                    <li><a href="#">GREE</a></li>
-                </ul>
-            </li>
-            <li><a href="./COntact.html">Contact</a></li>
-        </ul>
+        <ul class="nav-links-desktop" id="nav-links-desktop">
+            <li><a href="./index.html" onclick="setActive(this)">Home</a></li>
+            <li><a href="./About.html" onclick="setActive(this)">About</a></li>
+            <li><a href="./Contact.html" onclick="setActive(this)">Contact</a></li>
+          </ul>
         <!-- Mobile Menu Button -->
         <button class="menu-toggle" id="menu-toggle">☰</button>
     </nav>
@@ -48,14 +40,6 @@
         <ul class="nav-links">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./About.html">About</a></li>
-            <li class="dropdown">
-                <a href="#">Brands &#9662;</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">HiSense</a></li>
-                    <li><a href="#">Orient</a></li>
-                    <li><a href="#">GREE</a></li>
-                </ul>
-            </li>
             <li><a href="./COntact.html">Contact</a></li>
         </ul>
     </div>

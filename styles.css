@@ -16,8 +16,8 @@ body {
 }
 
 .logo img {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     object-fit: cover;
     border-radius: 50%;
     transition: 0.3s;
@@ -29,6 +29,18 @@ body {
 /* Offcanvas Menu (Hidden by Default) */
 .offcanvas-menu {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: teal;
+    padding-top: 60px;
+    transition: 0.3s ease-in-out;
+    z-index: 100;
+    overflow-y: auto;
+    left: -300px;
+    overflow-x: hidden;
 }
 
 /* Normal Navbar Links for Desktop */
@@ -36,22 +48,65 @@ body {
     display: flex;
     gap: 20px;
     list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav-links-desktop a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
+     font-size: 18px;
     font-weight: bold;
-    transition: 0.3s;
-}
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    margin-top: 10px;
 
-.nav-links-desktop a:hover {
-    background: gold;
-    color: teal;
-    padding: 10px;
-    border-radius: 5px;
+  
 }
+/* active */
+.nav-links-desktop li {
+    position: relative;
+  }
+
+  .nav-links-desktop a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links-desktop li.active a {
+    font-weight: bold;
+    color: white;
+  }
+
+.nav-links-desktop li.active a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Line position */
+    width: 100%;
+    height: 3px; /* Line thickness */
+    background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,1), rgba(255,255,255,0.2));
+  }
+  .nav-links-desktop li.active a::after {
+    width: 100%;
+  }
 
 /* Hide Menu Button on Desktop */
 .menu-toggle {
@@ -145,7 +200,7 @@ img.img-fluid.w-80.wow.zoomIn:hover{
     }
 
     .offcanvas-menu.show {
-        right: 0;
+        left: 0;
     }
 
     .close-btn {
@@ -179,14 +234,10 @@ img.img-fluid.w-80.wow.zoomIn:hover{
         display: block;
         transition: 0.3s;
     }
-
     .nav-links a:hover {
-        background: gold;
-        color: teal;
-        padding: 10px;
+        color: rgb(202, 202, 202);
     }
    
-
     /* Overlay for Mobile */
     .overlay {
         display: none;
@@ -266,6 +317,7 @@ img.img-fluid.w-75.wow.zoomIn{
     display: block;
 }
 
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -331,6 +383,60 @@ img.img-fluid.w-75.wow.zoomIn{
     margin-bottom: 40px;
     /* border: 2px solid red; */
     width: 90%;
+}
+/* course; */
+.carousel-caption {
+    top: 0 !important;
+    left: 0px !important;
+    right: 0px  !important ;
+    bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(1, 10, 53, .8);
+    z-index: 1;
+
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+    background: none;
+    z-index: 5;
+    border: none;
+    padding: 0;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--dark);
+    border: 12px solid var(--dark);
+    border-radius: 3rem;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background: linear-gradient(rgba(1, 10, 53, .8), rgba(1, 10, 53, .8)), url(./img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
 }
 div#main-cards{
     display: flex;
@@ -417,33 +523,7 @@ a.btn.btn-primary:hover {
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
-/* breadcrumb */
-ol.breadcrumb {
-    background: none;
-    padding: 10px 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    letter-spacing: 2px;
-    font-style: italic;
-    margin-top: 40px;
-}
-
-/* counter sec */
-/* .counter-section {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    background: url('./img/service-3.jpg') no-repeat center center/cover;
-    color: white;
-} */
-
+/* Counter section */
 .counter-section {
     display: flex;
     justify-content: space-around;
