@@ -253,6 +253,16 @@ img.img-fluid.w-80.wow.zoomIn:hover{
     .overlay.show {
         display: block;
     }
+    .logo img{
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: 0.3s;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin-left: 20px;
+    }
 }
 
 /* About section images */
@@ -828,3 +838,29 @@ label {
     }
     
 }
+.btn.btn-primary.py-3.px-5.animated.slideInDown{
+    background: teal;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-color: teal;
+    transition: 0.3s;
+}
+.btn.btn-primary.py-3.px-5.animated.slideInDown:hover{
+    background-color: white !important;
+    color: teal;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.btn-primary.py-3.px-5.animated.slideInDown:focus{
+    outline: none;
+}
+
+  
