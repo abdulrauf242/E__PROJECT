@@ -2,62 +2,109 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Glacier Cool - The best cooling & heating service center providing expert AC solutions.">
-    <title>Glacier Cool</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="./script.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Glacier Cool - The best cooling & heating service center providing expert AC solutions.">
+  <title>Glacier Cool</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="./script.js">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="./index.html"><img src="./assests/logo.png.webp" alt="Resume Builder Logo"></a>
-        </div>
-        <!-- Desktop Menu -->
-        <ul class="nav-links-desktop" id="nav-links-desktop">
-          <li><a href="./index.html" onclick="setActive(this)">Home</a></li>
-          <li><a href="./About.html" onclick="setActive(this)">About</a></li>
-          <li><a href="./Contact.html" onclick="setActive(this)">Contact</a></li>
-        </ul>
-        <!-- Mobile Menu Button -->
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-    </nav>
-    <!-- Offcanvas Menu (Only Mobile) -->
-    <div class="offcanvas-menu" id="offcanvas-menu">
-        <button class="close-btn" id="close-btn">✖</button>
-        <ul class="nav-links">
-          <li onclick="setActive(this)"><a href="./index.html">Home</a></li>
-          <li onclick="setActive(this)"><a href="./About.html">About</a></li>
-          <li onclick="setActive(this)"><a href="./COntact.html">Contact</a></li>
-        </ul>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="./index.html"><img src="./assests/logo.png.webp" alt="Resume Builder Logo"></a>
     </div>
-    <div class="overlay" id="overlay"></div>
+    <!-- Desktop Menu -->
+    <ul class="nav-links-desktop" id="nav-links-desktop">
+      <li><a href="./index.html" onclick="setActive(this)">Home</a></li>
+      <li><a href="./About.html" onclick="setActive(this)">About</a></li>
+      <li><a href="./Contact.html" onclick="setActive(this)">Contact</a></li>
+    </ul>
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </nav>
+  <!-- Offcanvas Menu (Only Mobile) -->
+  <div class="offcanvas-menu" id="offcanvas-menu">
+    <button class="close-btn" id="close-btn">✖</button>
+    <ul class="nav-links">
+      <li onclick="setActive(this)"><a href="./index.html">Home</a></li>
+      <li onclick="setActive(this)"><a href="./About.html">About</a></li>
+      <li onclick="setActive(this)"><a href="./COntact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="overlay" id="overlay"></div>
 </body>
 
 </html>
-    <!--  -->
-    <div id="contact-us" class="row">
-        <div class="col-md-6">
-       <h1 id="heading">Contact Us</h1>
-       <!-- <form id="contact-form"> -->
-        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <div class="form-group">
-          <input type="hidden" name="access_key" value="59ad199c-409f-44d1-bd15-bfbf53527e10">
-          <label for="name">Name</label>
-          <input type="pattern" id="name" name="name" class="form-control" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" class="form-control" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea required>
+<!--  -->
+<div class="container-fluid p-0 mb-5">
+  <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+              <div class="carousel-caption">
+                  <div class="container">
+                      <div class="row justify-content-center">
+                          <div class="col-lg-7 pt-5">
+                              <h1 class="display-4 text-white mb-4 animated slideInDown"
+                                  style="font-family: 'Poppins', sans-serif; font-weight: bolder;">Contact us</h1>
+                              <p class="fs-5 text-white mb-4 pb-2 mx-sm-5 animated slideInDown">Experience ultimate comfort with our energy-efficient air conditioners, designed for quiet, reliable cooling all year round. Stay cool and save energy with advanced, eco-friendly technology.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+              <div class="carousel-caption">
+                  <div class="container">
+                      <div class="row justify-content-center">
+                          <div class="col-lg-7 pt-5">
+                              <h1 class="display-4 text-white mb-4 animated slideInDown"
+                                  style="font-family: 'Poppins', sans-serif; font-weight: bolder;">Contact us</h1>
+                              <p class="fs-5 text-white mb-4 pb-2 mx-sm-5 animated slideInDown">Experience ultimate comfort with our energy-efficient air conditioners, designed for quiet, reliable cooling all year round. Stay cool and save energy with advanced, eco-friendly technology
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+<!--  -->
+<div id="contact-us" class="row">
+  <div class="col-md-6">
+    <h1 id="heading">Contact Us</h1>
+    <!-- <form id="contact-form"> -->
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <div class="form-group">
+        <input type="hidden" name="access_key" value="59ad199c-409f-44d1-bd15-bfbf53527e10">
+        <label for="name">Name</label>
+        <input type="text" pattern="[A-Za-z]" id="name" name="name" class="form-control" placeholder="Your Name"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea required>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
@@ -69,6 +116,7 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019019841234!2d144.9630579153169!3d-37.8141079797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8b8b8b8b8b8!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614123456789!5m2!1sen!2sau"
               width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
               tabindex="0"></iframe>
+              <p  id="location"></p>
           </div>
         </div>
       </div>

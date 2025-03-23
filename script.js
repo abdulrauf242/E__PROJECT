@@ -47,13 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //     }).format(price) + " PKR";
     // }
     fetch("main.json")
-    .then(response => response.json())
-    .then(json => {
-      const mainCards = document.getElementById("main-cards");
-      mainCards.innerHTML = ""; // Clear existing cards
-  
-      json.forEach(item => {
-        mainCards.innerHTML += `
+        .then(response => response.json())
+        .then(json => {
+            const mainCards = document.getElementById("main-cards");
+            mainCards.innerHTML = ""; // Clear existing cards
+
+            json.forEach(item => {
+                mainCards.innerHTML += `
           <div class="card" style="width: 18rem;">
             <img src="${item.img}" class="card-img-top" alt="${item.name}">
             <div class="card-body">
@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="detail.html?id=${item.id}" class="btn btn-primary">Buy Now</a>
             </div>
           </div>`;
-      });
-    })
-    .catch(error => console.error("Error fetching the JSON data:", error));
-function formatPrice(price) {
-  return `Rs. ${price.toLocaleString()}`;
-}
-  
+            });
+        })
+        .catch(error => console.error("Error fetching the JSON data:", error));
+    function formatPrice(price) {
+        return `Rs. ${price.toLocaleString()}`;
+    }
+
     // Number Count
     const counters = document.querySelectorAll('.counter');
     const speed = 200; // The lower the slower
@@ -152,9 +152,9 @@ function setActive(element) {
     const links = document.querySelectorAll('#nav-links li');
     links.forEach(link => link.classList.remove('active'));
     element.classList.add('active');
-  }
+}
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll('#nav-links-desktop a');
     const currentUrl = window.location.pathname;
 
@@ -164,18 +164,56 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-  function setActive(element) {
+function setActive(element) {
     const links = document.querySelectorAll('.nav-links-desktop li');
     links.forEach(link => link.classList.remove('active'));
     element.parentElement.classList.add('active');
-  }
+}
 
-  // Auto-activate the correct link on page load
-  document.addEventListener("DOMContentLoaded", () => {
+// Auto-activate the correct link on page load
+document.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname;
     document.querySelectorAll('.nav-links-desktop a').forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-        link.parentElement.classList.add('active');
-      }
+        if (link.getAttribute('href') === currentPath) {
+            link.parentElement.classList.add('active');
+        }
     });
-  });
+});
+//   
+// function onlyAlphabets(event){
+//     let char = String.fromCharCode(event.keyCode);
+//     let regex = /^[A-Za-z]+$/;
+//     return regex.test(char);
+// }
+// Check if geolocation is available in the browser
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(displayLocation, showError);
+} else {
+    document.getElementById('location').textContent = "Geolocation is not supported by this browser.";
+}
+
+// Function to display location
+function displayLocation(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    document.getElementById('location').textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+}
+
+// Function to handle errors
+function showError(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            document.getElementById('location').textContent = "User denied the request for Geolocation.";
+            break;
+        case error.POSITION_UNAVAILABLE:
+            document.getElementById('location').textContent = "Location information is unavailable.";
+            break;
+        case error.TIMEOUT:
+            document.getElementById('location').textContent = "The request to get user location timed out.";
+            break;
+        case error.UNKNOWN_ERROR:
+            document.getElementById('location').textContent = "An unknown error occurred.";
+            break;
+    }
+}

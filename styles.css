@@ -5,6 +5,82 @@ body {
     margin: 0;
     padding: 0;
 }
+/*  */
+
+div.col-lg-7.pt-5{
+    animation-name: FadeIn;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+/* Add your CSS animations here */
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.animated-section:nth-child(3) {
+    animation-delay: 1s;
+}
+.animated-section:nth-child(4) {
+    animation-delay: 1.5s;
+}
+.animated-section:nth-child(5) {
+    animation-delay: 2s;
+}
+.animated-section:nth-child(6) {
+    animation-delay: 2.5s;
+}
+.animated-section:nth-child(7) {
+    animation-delay: 3s;
+}
+.animated-section:nth-child(8) {
+    animation-delay: 3.5s;
+}
+.animated-section:nth-child(9) {
+    animation-delay: 4s;
+}
+.animated-section:nth-child(10) {
+    animation-delay: 4.5s;
+}
+.animated-section:nth-child(11) {
+    animation-delay: 5s;
+}
+.animated-section:nth-child(12) {
+    animation-delay: 5.5s;
+}
+.animated-section:nth-child(13) {
+    animation-delay: 6s;
+}
+.animated-section:nth-child(14) {
+    animation-delay: 6.5s;
+}
+.animated-section:nth-child(15) {
+    animation-delay: 7s;
+}
+/*  */
+iframe {
+    max-width: 100%;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
 /* navbar */
 /* Default Navbar (Desktop) */
 .navbar {
@@ -442,6 +518,16 @@ img.img-fluid.w-75.wow.zoomIn{
         height: 100%;
         object-fit: cover;
     }
+   p.fs-5.text-white.mb-4.pb-2.mx-sm-5.animated.slideInDown {
+       font-size: 15px !important;
+         text-align: center;
+         margin-bottom: 60px    !important;
+         letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+           
+   }
+  
 }
 
 .page-header {
