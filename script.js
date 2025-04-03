@@ -217,3 +217,24 @@ function showError(error) {
             break;
     }
 }
+// Smooth Scroll
+const scrollLinks = document.querySelectorAll('a[href^="#"]');
+scrollLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Offcanvas Menu
+const menuToggle = document.getElementById("menu-toggle");
+const closeBtn = document.getElementById("close-btn");
+const offcanvasMenu = document.getElementById("offcanvas-menu");
+const overlay = document.getElementById("overlay");

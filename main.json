@@ -30,6 +30,14 @@
         "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
         "price": 49999,
         "img": "./assests/hisense.webp"
+    },
+    {
+      "id": "5",
+      "brand": "Hisense",
+      "name": "Hisense INVERTER SPLIT AC 18TQ 60HC - 1.5 TON",
+      "disc": "Delivery All Over Pakistan & Free Delivery In Karachi",
+      "price": 49999,
+      "img": "./assests/hi sense.jpg"
     }
 
 ]

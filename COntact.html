@@ -12,6 +12,9 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="./script.js">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -44,46 +47,50 @@
 <!--  -->
 <div class="container-fluid p-0 mb-5">
   <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-          <div class="carousel-item active">
-              <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-              <div class="carousel-caption">
-                  <div class="container">
-                      <div class="row justify-content-center">
-                          <div class="col-lg-7 pt-5">
-                              <h1 class="display-4 text-white mb-4 animated slideInDown"
-                                  style="font-family: 'Poppins', sans-serif; font-weight: bolder;">Contact us</h1>
-                              <p class="fs-5 text-white mb-4 pb-2 mx-sm-5 animated slideInDown">Experience ultimate comfort with our energy-efficient air conditioners, designed for quiet, reliable cooling all year round. Stay cool and save energy with advanced, eco-friendly technology.
-                              </p>
-                          </div>
-                      </div>
-                  </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+        <div class="carousel-caption">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-7 pt-5">
+                <h1 class="display-4 text-white mb-4 animated slideInDown"
+                  style="font-family: 'Poppins', sans-serif; font-weight: bolder;">Contact us</h1>
+                <p class="fs-5 text-white mb-4 pb-2 mx-sm-5 animated slideInDown">Experience ultimate comfort with our
+                  energy-efficient air conditioners, designed for quiet, reliable cooling all year round. Stay cool and
+                  save energy with advanced, eco-friendly technology.
+                </p>
               </div>
+            </div>
           </div>
-          <div class="carousel-item">
-              <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-              <div class="carousel-caption">
-                  <div class="container">
-                      <div class="row justify-content-center">
-                          <div class="col-lg-7 pt-5">
-                              <h1 class="display-4 text-white mb-4 animated slideInDown"
-                                  style="font-family: 'Poppins', sans-serif; font-weight: bolder;">Contact us</h1>
-                              <p class="fs-5 text-white mb-4 pb-2 mx-sm-5 animated slideInDown">Experience ultimate comfort with our energy-efficient air conditioners, designed for quiet, reliable cooling all year round. Stay cool and save energy with advanced, eco-friendly technology
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-      </button>
+      <div class="carousel-item">
+        <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+        <div class="carousel-caption">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-7 pt-5">
+                <h1 class="display-4 text-white mb-4 animated slideInDown"
+                  style="font-family: 'Poppins', sans-serif; font-weight: bolder;">Contact us</h1>
+                <p class="fs-5 text-white mb-4 pb-2 mx-sm-5 animated slideInDown">Experience ultimate comfort with our
+                  energy-efficient air conditioners, designed for quiet, reliable cooling all year round. Stay cool and
+                  save energy with advanced, eco-friendly technology
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </div>
 <!--  -->
@@ -95,7 +102,7 @@
       <div class="form-group">
         <input type="hidden" name="access_key" value="59ad199c-409f-44d1-bd15-bfbf53527e10">
         <label for="name">Name</label>
-        <input type="text" pattern="[A-Za-z]" id="name" name="name" class="form-control" placeholder="Your Name"
+        <input type="text" pattern="[A-Z and a-z]" id="name" name="name" class="form-control" placeholder="Your Name"
           required>
       </div>
       <div class="form-group">
@@ -111,12 +118,9 @@
         </div>
         <div class="col-md-6">
           <h1 id="heading">Our Location</h1>
-          <div id="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019019841234!2d144.9630579153169!3d-37.8141079797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8b8b8b8b8b8!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614123456789!5m2!1sen!2sau"
-              width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-              tabindex="0"></iframe>
-              <p  id="location"></p>
+          <p id="location"></p>
+          <div id="map"></div>
+
           </div>
         </div>
       </div>
@@ -134,10 +138,10 @@
         <div class="col-md-4 mb-3">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-            <li><a href="#" class="text-white text-decoration-none">About</a></li>
+            <li><a href="./index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="./About.html" class="text-white text-decoration-none">About</a></li>
             <li><a href="#" class="text-white text-decoration-none">Services</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+            <li><a href="./COntact.html" class="text-white text-decoration-none">Contact</a></li>
           </ul>
         </div>
   
@@ -165,6 +169,68 @@
      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
      crossorigin="anonymous"></script>
  <script src="script.js"></script>
+ <script>
+        let map;
+        let marker;
+
+        // Automatically get location on page load
+        window.onload = function () {
+            getLocation();
+        };
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            document.getElementById("location").innerHTML = `Latitude: ${lat} <br>Longitude: ${lon}`;
+
+            // Initialize the map
+            if (!map) {
+                map = L.map('map').setView([lat, lon], 13);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+            } else {
+                map.setView([lat, lon], 13);
+            }
+
+            // Remove the old marker if it exists
+            if (marker) {
+                map.removeLayer(marker);
+            }
+
+            // Add a new marker
+            marker = L.marker([lat, lon]).addTo(map)
+                .bindPopup("You are here!")
+                .openPopup();
+        }
+
+        function showError(error) {
+            let message;
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    message = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    message = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    message = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    message = "An unknown error occurred.";
+                    break;
+            }
+            document.getElementById("location").innerHTML = message;
+        }
+</script>
  </html>
     </body>
     </html>
